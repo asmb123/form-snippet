@@ -46,30 +46,8 @@ export type InputProps = {
   sx?: Record<string, any>;
   label: string;
   name: string;
-  /**
-   * @param {{type: "text" | "password" | "email" | "number" | "tel" | "url" | "search" | "date" | "time" | "datetime-local" | "month" | "week" | "color"}}
-   */
-  type?:
-    | "text"
-    | "password"
-    | "email"
-    | "number"
-    | "tel"
-    | "url"
-    | "search"
-    | "date"
-    | "time"
-    | "datetime-local"
-    | "month"
-    | "week"
-    | "color";
-  /**
-   * @param {{variant: "outlined" | "filled" | "standard"}}
-   */
+  type?: "text" | "password" | "email" | "number" | "tel" | "url" | "search" | "date" | "time" | "datetime-local" | "month" | "week" | "color";
   variant?: "outlined" | "filled" | "standard";
-  /**
-   * @param {{size: "small" | "medium"}}
-   */
   size?: "small" | "medium";
   disabled?: boolean;
   readOnly?: boolean;
@@ -86,9 +64,6 @@ export type InputProps = {
   multiline?: any;
   startIcon?: string | React.ReactElement;
   endIcon?: string | React.ReactElement;
-  /**
-   * @param {{autoComplete: "on" | "off"}}
-   */
   autoComplete?: "on" | "off";
 };
 
@@ -123,6 +98,7 @@ function Input({
   const handleShowPasswordClick = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = (e: React.MouseEvent<HTMLButtonElement>) =>
     e.preventDefault();
+
   return (
     <Controller
       control={control}
